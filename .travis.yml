@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- "0.10"
+before_install:
+- npm config set ca ""
+- npm install -g grunt-cli
+- npm install -g bower
+# - npm install -g selenium-webdriver
+install:
+- yes no | bower install
+- npm install
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  # - webdriver-manager update --standalone && webdriver-manager start > /dev/null &
+  # - sleep 20

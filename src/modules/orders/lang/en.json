@@ -1,0 +1,27 @@
+{
+  "tthew": {
+    "orders": {
+      "TITLE": "Orders",
+      "common": {
+        "ORDER": "Order"
+      },
+      "orders": {
+        "ORDER_DATE": "Order Date",
+        "ORDER_REF": "Order Ref.",
+        "QUANTITY": "QTY",
+        "ORDER": "Order",
+        "LOOK_UP": "Look up"
+      },
+      "order": {
+        "NOT_FOUND": "Order Ref not found",
+        "PRODUCT_TITLE": "Product",
+        "AMOUNT": "Amount",
+        "CARD_NUMBER": "Card #",
+        "MESSAGE": "Message",
+        "LINK": "Link",
+        "TOTAL_ITEMS": "Total Items",
+        "COMPLETE_ORDER": "Complete Order"
+      }
+    } 
+  }
+}

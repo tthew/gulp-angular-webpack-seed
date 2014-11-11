@@ -1,0 +1,45 @@
+{
+  "name": "tthew-gulp-angular-webpack-seed",
+  "version": "0.0.1",
+  "homepage": "",
+  "authors": [
+    "Matt Richards <matt@lucidmoon.co.uk>"
+  ],
+  "description": "",
+  "main": "src/index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.0",
+    "angular-mocks": "~1.2.25",
+    "angular-ui-router": "~0.2.11",
+    "angular-foundation": "~0.3.1",
+    "foundation": "~5.4.5",
+    "angular-animate": "~1.3.0",
+    "font-awesome": "~4.2.0",
+    "angular-bindonce": "~0.3.1",
+    "query-string": "~1.0.0",
+    "angular-ui-select": "~0.7.0",
+    "angular-sanitize": "~1.2.26",
+    "contentful": "~0.1.2",
+    "ng-contentful": "~0.1.2",
+    "showdown": "~0.3.1",
+    "angular-markdown-filter": "~1.0.0",
+    "angularjs": "~1.3.0",
+    "restangular": "~1.4.0",
+    "lodash": "~2.4.1",
+    "angular-translate": "~2.4.2",
+    "bootstrap-sass-official": "~3.3.0"
+  },
+  "resolutions": {
+    "angular": "~1.3.0",
+    "angular-animate": "~1.3.0"
+  }
+}

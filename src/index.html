@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="tthew.app" ng-cloak>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>tthew-gulp-angular-webpack-seed</title>
+  </head>
+  <body class="tthew app">
+    <div class="container-fluid">
+        <ui-view></ui-view>
+    </div>
+
+    {% for (var chunk in o.htmlWebpackPlugin.assets) { %}
+    <script src="{%=o.htmlWebpackPlugin.assets[chunk]%}"></script>
+    {% } %}
+  </body>
+</html>

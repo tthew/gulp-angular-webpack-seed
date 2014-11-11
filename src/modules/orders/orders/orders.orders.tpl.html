@@ -1,0 +1,46 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        <input
+          type="checkbox"
+          ng-model="vm.checkAllSelected"
+          ng-click="vm.checkAll(vm.checkAllSelected)" />
+      </th>
+      <th>{{::'tthew.orders.orders.ORDER_REF' | translate}}</th>
+      <th>{{::'tthew.orders.orders.ORDER_DATE' | translate}}</th>
+      <th>{{::'tthew.orders.orders.QUANTITY' | translate}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="order in orders | filter:orderLookup">
+      <td>
+        <input
+          type="checkbox"
+          ng-model="order.$selected" />
+      </td>
+      <td><a ng-click="vm.viewOrder(order.orderRef)">{{::order.orderRef}}</a></td>
+      <td>{{::order.orderDate | date}}</td>
+      <td>{{::order.quantity}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="order-lookup">
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <input
+        placeholder="{{::'tthew.orders.orders.ORDER_REF' | translate }}"
+        class="form-control"
+        type="text"
+        ng-model="orderLookup.$" />
+      <button
+        class="btn btn-default"
+        ng-click="vm.viewOrder(orderLookup.$)">{{::'tthew.orders.orders.LOOK_UP' | translate}}</button>
+    </div>
+
+  </form>
+</div>
+<hr />
+<ui-view></ui-view>
+

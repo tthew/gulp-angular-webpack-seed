@@ -1,0 +1,39 @@
+<div class="panel panel-default" ng-show="vm.order">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{::'tthew.orders.common.ORDER' | translate}} #{{::vm.order.orderRef}}</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>{{::'tthew.orders.order.PRODUCT_TITLE' | translate}}</th>
+          <th>{{::'tthew.orders.order.AMOUNT' | translate}}</th>
+          <th>{{::'tthew.orders.order.MESSAGE' | translate}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in ::vm.order.items">
+          <td>{{::item.productName}}</td>
+          <td>{{::item.amount | currency}}</td>
+          <td>
+            <p>{{::item.giftMessage.line1}}</p>
+            <p ng-show="::item.giftMessage.line2">{{::item.giftMessage.line2}}</p>
+            <p ng-show="::item.giftMessage.line3">{{::item.giftMessage.line3}}</p>
+            <p ng-show="::item.giftMessage.line4">{{::item.giftMessage.line4}}</p>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="text-right" colspan="3"><strong>{{::'tthew.orders.order.TOTAL_ITEMS' | translate}}: {{::vm.order.items.length}}</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<div class="panel panel-default" ng-hide="vm.order">
+  <div class="panel-body">
+    {{::'tthew.orders.order.NOT_FOUND' | translate}}
+  </div>
+</div>
