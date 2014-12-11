@@ -2,8 +2,8 @@
 
 [![Build Status][2]][1]
 
-  [1]: https://travis-ci.org/tthew/tthew-gulp-angular-webpack-seed
-  [2]: https://travis-ci.org/tthew/tthew-gulp-angular-webpack-seed.svg
+  [1]: https://travis-ci.org/tthew/gulp-angular-webpack-seed
+  [2]: https://travis-ci.org/tthew/gulp-angular-webpack-seed.svg
 
 An Angular.js based Single Page Application seed.
 
