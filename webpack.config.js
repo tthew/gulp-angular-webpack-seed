@@ -28,11 +28,11 @@ module.exports = {
       {
         // required to write 'require('./style.css')'
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style','css')
+        loaders: ['style','css']
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style!css!sass?outputStyle=expanded&includePaths[]=' + bowerRoot + '/')
+        loader: 'style!css!sass?outputStyle=expanded&includePaths[]=' + bowerRoot + '/'
       },
       {
         test: /\.coffee$/,

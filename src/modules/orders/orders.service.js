@@ -16,7 +16,6 @@ module.exports = function (config, $q, Restangular) {
           {
             productName: 'Baseball Cap',
             amount: 20.00,
-            cardId: null,
             giftMessage: {
               line1: 'Message Line 1',
               line2: 'Message Line 2',
@@ -27,7 +26,6 @@ module.exports = function (config, $q, Restangular) {
           {
             productName: 'Baseball Cap',
             amount: 20.00,
-            cardId: null,
             giftMessage: {
               line1: 'Message Line 1',
               line2: 'Message Line 2',
@@ -36,9 +34,8 @@ module.exports = function (config, $q, Restangular) {
             }
           },
           {
-            productName: 'Women\'s Card',
-            amount: 50.00,
-            cardId: null,
+            productName: 'Baseball',
+            amount: 10.00,
             giftMessage: {
               line1: 'Message Line 1',
               line2: 'Message Line 2',
