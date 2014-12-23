@@ -1,6 +1,10 @@
-var directive = require('./orders.directive.js');
+'use strict';
+var directive;
+var app;
 
-var app = angular.module('tthew.orders.orders.directive', [])
+directive = require('./orders.directive.js');
+
+app = angular.module('tthew.orders.orders.directive', [])
   .directive('orders', directive);
 
 module.exports = app;

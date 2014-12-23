@@ -1,11 +1,14 @@
+'use strict';
 // Gulp plugins
 var gulp = require('gulp');
 var changed = require('gulp-changed');
 var gutil = require('gulp-util');
 var gulpNgConfig = require('gulp-ng-config');
+var jscs = require('gulp-jscs');
+var jshint = require('gulp-jshint');
 
 // Misc
-var spawn = require('child_process').spawn;
+// var spawn = require('child_process').spawn;
 var argv = require('minimist')(process.argv.slice(2));
 var rimraf = require('rimraf');
 
@@ -82,9 +85,9 @@ gulp.task('webpack:build', function (done) {
 var webpackDevConfig = Object.create(webpackConfig);
 webpackDevConfig.devtool = 'eval';
 webpackDevConfig.debug = true;
-webpackDevCompiler = webpack(webpackDevConfig);
+var webpackDevCompiler = webpack(webpackDevConfig);
 
-gulp.task('webpack-dev-server', function (cb) {
+gulp.task('webpack-dev-server', function () {
   new WebpackDevServer(webpack(webpackDevConfig), {
     contentBase: './dist/',
     quiet: false,
@@ -142,7 +145,8 @@ gulp.task('clearTarget', function () {
 gulp.task('build', [
   'clearTarget',
   'webpack:build',
-  'other'
+  'other',
+  'quality'
 ]);
 
 // gulp watch, watch for changes
@@ -161,8 +165,13 @@ gulp.task('watch', ['clearTarget', 'other'], function () {
   gulp.watch(paths.other, ['other']);
 });
 
+gulp.task('quality', function () {
+  return gulp.src('./src/**/*.js')
+          .pipe(jshint())
+          .pipe(jscs());
+});
 // gulp serve, launches webpack-dev-server and watches
-gulp.task('serve', ['config', 'webpack-dev-server', 'watch']);
+gulp.task('serve', ['config', 'webpack-dev-server', 'quality', 'watch']);
 
 // gulp, default gulp behavior (build)
 gulp.task('default', ['build']);

@@ -1,4 +1,5 @@
-module.exports = function (orders) {
+module.exports = function(orders) {
+  'use strict';
   var vm = this;
   vm.orders = orders;
-}
+};

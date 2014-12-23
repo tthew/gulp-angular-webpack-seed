@@ -1,4 +1,5 @@
-module.exports = function (config, $q, Restangular) {
+module.exports = function(config, $q) {
+  'use strict';
   // Public API
   var service = {
     getOrders: getOrders
@@ -6,7 +7,7 @@ module.exports = function (config, $q, Restangular) {
 
   return service;
 
-  function getOrders () {
+  function getOrders() {
     var mockResponse = [
       {
         orderDate: new Date('12-06-2014 13:20:31'),
