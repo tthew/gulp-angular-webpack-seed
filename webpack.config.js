@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         // required for bootstrap icons
-        test: /\.woff(\?(.*))?$/,
+        test: /\.(woff|woff2)(\?(.*))?$/,
         loader: 'url?prefix=factorynts/&limit=5000&mimetype=application/font-woff'
       },
       {
