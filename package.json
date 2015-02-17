@@ -62,7 +62,8 @@
     "style-loader": "*",
     "url-loader": "^0.5.5",
     "webpack": "^1.4.9",
-    "webpack-core": "^0.4.8"
+    "webpack-core": "^0.4.8",
+    "webpack-dev-server": "~1.7.0"
   },
   "browser": {
     "fs": false
