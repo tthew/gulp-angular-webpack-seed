@@ -8,6 +8,9 @@
     <div class="container-fluid">
         <ui-view></ui-view>
     </div>
+    <!--Line needed for livereload --->
+    <script src="http://localhost:5000/webpack-dev-server.js"></script>
+    <!----->
 
     {% for (var chunk in o.htmlWebpackPlugin.assets) { %}
     <script src="{%=o.htmlWebpackPlugin.assets[chunk]%}"></script>
