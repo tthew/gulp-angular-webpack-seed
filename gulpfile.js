@@ -135,7 +135,7 @@ gulp.task('test', ['test:unit']);
 
 // clears dist directory
 gulp.task('clearTarget', function () {
-  rimraf.sync(paths.distDir, gutil.log);
+  rimraf(paths.distDir,gutil.log);
 });
 
 // gulp build, runs build
