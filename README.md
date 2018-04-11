@@ -1,6 +1,16 @@
 # gulp-angular-webpack-seed
 
-[![Build Status][2]][1]
+---
+
+This project is not maintained, contains vulnerable dependencies, leverages legacy libraries and tools (Angular 1.x, node ~0.10) and demonstrates outdated patterns.
+
+**There are almost certainly better ways to approach this**
+
+Proceed with caution & at your own risk!
+
+---
+
+[![Build Status][2]][1] [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
   [1]: https://travis-ci.org/tthew/gulp-angular-webpack-seed
   [2]: https://travis-ci.org/tthew/gulp-angular-webpack-seed.svg
