@@ -2,9 +2,9 @@
 
 This project is not maintained, contains vulnerable dependencies, leverages legacy libraries and tools (Angular 1.x, node ~0.10) and demonstrates outdated patterns.
 
-**There are almost certainly better ways to approach this**
+**There are almost certainly better ways to approach this with a modern stack!**
 
-Proceed with caution & at your own risk!
+Proceed with caution & at your own risk.
 
 ---
 
